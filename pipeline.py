@@ -16,10 +16,27 @@ class IntelligencePipeline:
             print("Warning: No GEMINI_API_KEY found. Using mock model.")
             self.gemini_model = None
 
+    def fetch_social_data(self):
+        """
+        Simulates fetching data from the SocialData API.
+        In a real scenario, this would call the external API.
+        """
+        try:
+            # Placeholder for API call
+            # raise Exception("API Unavailable") # Uncomment to test failure
+            return [] # Simulating no data for now
+        except Exception as e:
+            print(f"Error fetching social data: {e}")
+            return [] # Fallback: return empty list
+
     def reflection_loop(self, draft_content):
         """
         Reflects on the draft content using historical context and Gemini 1.5 Flash.
         """
+        if not draft_content:
+            print("No draft content to reflect on.")
+            return "No content available for analysis."
+
         print("Starting reflection loop...")
 
         # 1. Retrieve historical context
