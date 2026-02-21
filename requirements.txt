@@ -3,3 +3,4 @@ jinja2
 google-generativeai
 anthropic
 python-dotenv
+google-cloud-firestore
