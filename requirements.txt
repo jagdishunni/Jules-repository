@@ -4,3 +4,7 @@ google-generativeai
 anthropic
 python-dotenv
 google-cloud-firestore
+pandas
+google-cloud-secret-manager
+sendgrid
+requests
