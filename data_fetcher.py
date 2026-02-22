@@ -4,7 +4,7 @@ import os
 from google.cloud import firestore
 
 class DataFetcher:
-    def __init__(self, project_id=None):
+    def __init__(self, project_id='ai-newsletter-bot-487018'):
         try:
             self.db = firestore.Client(project=project_id)
         except Exception as e:

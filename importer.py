@@ -1,10 +1,10 @@
 import pandas as pd
 from google.cloud import firestore
 
-def import_influencers(csv_file='AI influencers for jules - Sheet1.csv'):
+def import_influencers(csv_file='AI influencers for jules - Sheet1.csv', project_id='ai-newsletter-bot-487018'):
     # Initialize Firestore
     try:
-        db = firestore.Client()
+        db = firestore.Client(project=project_id)
     except Exception as e:
         print(f"Warning: Could not initialize Firestore client: {e}")
         return

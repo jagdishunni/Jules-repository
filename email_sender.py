@@ -4,7 +4,7 @@ from sendgrid.helpers.mail import Mail, Email, To, Content
 from google.cloud import secretmanager
 
 class EmailSender:
-    def __init__(self, project_id=None):
+    def __init__(self, project_id='ai-newsletter-bot-487018'):
         self.api_key = self.get_sendgrid_key(project_id)
         if self.api_key:
             self.sg = sendgrid.SendGridAPIClient(api_key=self.api_key)
