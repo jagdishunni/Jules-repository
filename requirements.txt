@@ -1,0 +1,5 @@
+flask
+jinja2
+google-generativeai
+anthropic
+python-dotenv
